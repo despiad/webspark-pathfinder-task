@@ -48,7 +48,7 @@ class ProcessCubit extends Cubit<ProcessState> {
         percents: curState.percents,
         grids: curState.grids));
     try {
-      // await _dataRepository.sendResults(url, curState.solutions);
+      await _dataRepository.sendResults(url, curState.solutions);
       await _dataRepository.saveSolutions(curState.solutions);
       emit(SuccessSendingResultsState(
         solutions: curState.solutions,

@@ -41,7 +41,14 @@ final class RemoteDatasource {
     log('Making POST request to $url');
     final encoded = jsonEncode(results);
     log(encoded);
-    final rawResponse = await http.post(Uri.parse(url), body: encoded);
+    final rawResponse = await http.post(
+      Uri.parse(url),
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: encoded,
+    );
     if (rawResponse.statusCode == HttpStatus.methodNotAllowed) {
       throw Exception("Method POST not allowed");
     }
