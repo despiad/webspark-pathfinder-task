@@ -1,0 +1,30 @@
+name: webspark_task
+description: "An implementation of the test task from Webspark."
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  http: ^1.2.2
+  collection: ^1.18.0
+  flutter_bloc: ^8.1.6
+  meta: ^1.15.0
+  characters: ^1.3.0
+  path_provider: ^2.1.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
